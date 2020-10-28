@@ -1,0 +1,39 @@
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePets (20201028222050)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "pets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "species" varchar, "year_of_birth" integer, "good_with_kids" boolean, "picture_of_animal" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201028222050"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-28 22:23:55.632874"], ["updated_at", "2020-10-28 22:23:55.632874"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("name", "species", "year_of_birth", "good_with_kids", "picture_of_animal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rex"], ["species", "dog"], ["year_of_birth", 2010], ["good_with_kids", 1], ["picture_of_animal", "https://dogtime.com/assets/uploads/2018/10/puppies-cover-1280x720.jpg"], ["created_at", "2020-10-28 22:24:01.198982"], ["updated_at", "2020-10-28 22:24:01.198982"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Create (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "species", "year_of_birth", "good_with_kids", "picture_of_animal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cash"], ["species", "cat"], ["year_of_birth", 2019], ["good_with_kids", 1], ["picture_of_animal", "https://www.animalfriends.co.uk/app/uploads/2018/10/31102444/why-isnt-anyone-adopting-black-cats.jpg"], ["created_at", "2020-10-28 22:24:01.202040"], ["updated_at", "2020-10-28 22:24:01.202040"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Create (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "species", "year_of_birth", "good_with_kids", "picture_of_animal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tweety"], ["species", "bird"], ["year_of_birth", 2018], ["good_with_kids", 0], ["picture_of_animal", "https://images.unsplash.com/photo-1550853024-fae8cd4be47f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"], ["created_at", "2020-10-28 22:24:01.204241"], ["updated_at", "2020-10-28 22:24:01.204241"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Create (0.3ms)[0m  [1m[32mINSERT INTO "pets" ("name", "species", "year_of_birth", "good_with_kids", "picture_of_animal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rex"], ["species", "dog"], ["year_of_birth", 2010], ["good_with_kids", 1], ["picture_of_animal", "https://dogtime.com/assets/uploads/2018/10/puppies-cover-1280x720.jpg"], ["created_at", "2020-10-28 22:25:08.758584"], ["updated_at", "2020-10-28 22:25:08.758584"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Create (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "species", "year_of_birth", "good_with_kids", "picture_of_animal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cash"], ["species", "cat"], ["year_of_birth", 2019], ["good_with_kids", 1], ["picture_of_animal", "https://www.animalfriends.co.uk/app/uploads/2018/10/31102444/why-isnt-anyone-adopting-black-cats.jpg"], ["created_at", "2020-10-28 22:25:08.762604"], ["updated_at", "2020-10-28 22:25:08.762604"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPet Create (0.2ms)[0m  [1m[32mINSERT INTO "pets" ("name", "species", "year_of_birth", "good_with_kids", "picture_of_animal", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tweety"], ["species", "bird"], ["year_of_birth", 2018], ["good_with_kids", 0], ["picture_of_animal", "https://images.unsplash.com/photo-1550853024-fae8cd4be47f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"], ["created_at", "2020-10-28 22:25:08.766822"], ["updated_at", "2020-10-28 22:25:08.766822"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m

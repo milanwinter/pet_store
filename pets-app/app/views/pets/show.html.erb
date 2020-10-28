@@ -1,0 +1,10 @@
+<h2> Pet Detail Page </h2>
+<p> <%=@pet.name.capitalize%> the <%=@pet.species.capitalize%> </p>
+<p> Age: <%=Time.current.year.to_i - @pet.year_of_birth%> </p>
+<% if @pet.good_with_kids%>
+    <p> Good with children</p>
+    <% else %>
+    <p> Prefers a home without children <p>
+ <%end%>
+<img src=<%=@pet.picture_of_animal%> >
+<p><%= link_to "Pets Page", pets_path %> </p>

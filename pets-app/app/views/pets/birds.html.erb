@@ -1,0 +1,5 @@
+<div>
+    <% @birds.each do |bird|%>
+        <div><%= link_to bird.name, pet_path(bird)%></div>
+        <% end %>
+</div>
